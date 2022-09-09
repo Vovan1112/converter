@@ -1,8 +1,7 @@
-import React from 'react';
-
+import { React, memo } from 'react';
 const defaultCurrencies = ['UAH', 'USD', 'EUR'];
 
-export const Block = ({ value, currency, onChangeValue, onChangeCurrency }) => (
+const Block = ({ value, currency, onChangeValue, onChangeCurrency }) => (
   <div className="block">
     <ul className="currencies">
       {defaultCurrencies.map((cur) => (
@@ -28,3 +27,5 @@ export const Block = ({ value, currency, onChangeValue, onChangeCurrency }) => (
     />
   </div>
 );
+
+export default memo(Block);
